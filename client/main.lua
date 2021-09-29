@@ -183,7 +183,7 @@ Citizen.CreateThread(function()
 
         for k in pairs(rentbike) do
 		
-            local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
+            local plyCoords = GetEntityCoords(PlayerPedId(), false)
             local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, rentbike[k].x, rentbike[k].y, rentbike[k].z)
 
             if dist <= 0.5 then
@@ -207,7 +207,7 @@ Citizen.CreateThread(function()
 
         for k in pairs(gym) do
 		
-            local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
+            local plyCoords = GetEntityCoords(PlayerPedId(), false)
             local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, gym[k].x, gym[k].y, gym[k].z)
 
             if dist <= 0.5 then
@@ -227,7 +227,7 @@ Citizen.CreateThread(function()
 
         for k in pairs(arms) do
 
-            local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
+            local plyCoords = GetEntityCoords(PlayerPedId(), false)
             local dist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, arms[k].x, arms[k].y, arms[k].z)
 
             if dist <= 0.5 then
